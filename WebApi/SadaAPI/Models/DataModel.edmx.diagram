@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bfaf6a2aa3d6417baa4caa766022fc19" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="Models.Adocao" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Animal" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Anuncio" Width="1.5" PointX="6" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.AnuncioEvento" Width="1.5" PointX="6.375" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Comunicacao" Width="1.5" PointX="9" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Evento" Width="1.5" PointX="3.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.TipoAnuncio" Width="1.5" PointX="8.875" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Usuario" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK_Adocao_ToAnuncio" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Adocao_ToUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Anuncio_ToAnimal" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Anuncio_ToTipoAnuncio" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Anuncio_ToUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_AnuncioEvento_ToAnuncio" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Comunicacao_ToAnuncio" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_AnuncioEvento_ToEvento" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Comunicacao_ToComunicacao" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Evento_ToUsuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

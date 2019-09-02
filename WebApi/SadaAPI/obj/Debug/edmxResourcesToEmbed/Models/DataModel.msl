@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="DataModel">
+    <EntitySetMapping Name="Adocao">
+      <EntityTypeMapping TypeName="Models.Adocao">
+        <MappingFragment StoreEntitySet="Adocao">
+          <ScalarProperty Name="Id_Adocao" ColumnName="Id_Adocao" />
+          <ScalarProperty Name="DataAdocao" ColumnName="DataAdocao" />
+          <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+          <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Animal">
+      <EntityTypeMapping TypeName="Models.Animal">
+        <MappingFragment StoreEntitySet="Animal">
+          <ScalarProperty Name="Id_Animal" ColumnName="Id_Animal" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Raca" ColumnName="Raca" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+          <ScalarProperty Name="Cor" ColumnName="Cor" />
+          <ScalarProperty Name="DescricaoAnimal" ColumnName="DescricaoAnimal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Anuncio">
+      <EntityTypeMapping TypeName="Models.Anuncio">
+        <MappingFragment StoreEntitySet="Anuncio">
+          <ScalarProperty Name="Id_Anuncio" ColumnName="Id_Anuncio" />
+          <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+          <ScalarProperty Name="Fk_Animal" ColumnName="Fk_Animal" />
+          <ScalarProperty Name="Fk_TipoAnuncio" ColumnName="Fk_TipoAnuncio" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnuncioEvento">
+      <EntityTypeMapping TypeName="Models.AnuncioEvento">
+        <MappingFragment StoreEntitySet="AnuncioEvento">
+          <ScalarProperty Name="Id_AnuncioEvento" ColumnName="Id_AnuncioEvento" />
+          <ScalarProperty Name="Fk_Evento" ColumnName="Fk_Evento" />
+          <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunicacao">
+      <EntityTypeMapping TypeName="Models.Comunicacao">
+        <MappingFragment StoreEntitySet="Comunicacao">
+          <ScalarProperty Name="Id_Comunicacao" ColumnName="Id_Comunicacao" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+          <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+          <ScalarProperty Name="Fk_Comunicacao" ColumnName="Fk_Comunicacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="Models.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="Id_Evento" ColumnName="Id_Evento" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DescricaoEvento" ColumnName="DescricaoEvento" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataEncerramento" ColumnName="DataEncerramento" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="ListaDePresenca" ColumnName="ListaDePresenca" />
+          <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAnuncio">
+      <EntityTypeMapping TypeName="Models.TipoAnuncio">
+        <MappingFragment StoreEntitySet="TipoAnuncio">
+          <ScalarProperty Name="Id_TipoAnuncio" ColumnName="Id_TipoAnuncio" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="Models.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

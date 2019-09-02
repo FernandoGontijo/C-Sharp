@@ -1,0 +1,222 @@
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\ApplicationInsights.config
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\SadaAPI.dll.config
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\SadaAPI.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\SadaAPI.pdb
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Antlr3.Runtime.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Newtonsoft.Json.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Helpers.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Mvc.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Optimization.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Razor.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\WebGrease.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Newtonsoft.Json.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Helpers.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Mvc.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Optimization.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Razor.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Antlr3.Runtime.pdb
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\obj\Debug\SadaAPI.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\obj\Debug\SadaAPI.pdb
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\EntityFramework.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\EntityFramework.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Cors.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.dll
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.xml
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csprojAssemblyReference.cache
+C:\Users\Usuário\source\repos\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CopyComplete
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\ApplicationInsights.config
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\SadaAPI.dll.config
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\SadaAPI.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\SadaAPI.pdb
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Antlr3.Runtime.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\EntityFramework.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Newtonsoft.Json.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Cors.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Helpers.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Mvc.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Optimization.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Razor.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\WebGrease.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\EntityFramework.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Newtonsoft.Json.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Helpers.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Mvc.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Optimization.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.Razor.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Antlr3.Runtime.pdb
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.xml
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csprojResolveAssemblyReference.cache
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\obj\Debug\SadaAPI.dll
+C:\Users\Deivid Melo\Desktop\fernando\SadaAPI\SadaAPI\obj\Debug\SadaAPI.pdb
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\ApplicationInsights.config
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\SadaAPI.dll.config
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\SadaAPI.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\SadaAPI.pdb
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Antlr3.Runtime.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\EntityFramework.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Newtonsoft.Json.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Cors.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Helpers.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Mvc.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Optimization.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Razor.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\WebGrease.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\EntityFramework.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Newtonsoft.Json.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Helpers.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Mvc.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Optimization.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.Razor.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Antlr3.Runtime.pdb
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.xml
+E:\Área de Trabalho\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csprojAssemblyReference.cache
+E:\Área de Trabalho\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CoreCompileInputs.cache
+E:\Área de Trabalho\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CopyComplete
+E:\Área de Trabalho\SadaAPI\SadaAPI\obj\Debug\SadaAPI.dll
+E:\Área de Trabalho\SadaAPI\SadaAPI\obj\Debug\SadaAPI.pdb
+E:\Drive\SadaAPI\SadaAPI\bin\ApplicationInsights.config
+E:\Drive\SadaAPI\SadaAPI\bin\SadaAPI.dll.config
+E:\Drive\SadaAPI\SadaAPI\bin\SadaAPI.dll
+E:\Drive\SadaAPI\SadaAPI\bin\SadaAPI.pdb
+E:\Drive\SadaAPI\SadaAPI\bin\Antlr3.Runtime.dll
+E:\Drive\SadaAPI\SadaAPI\bin\EntityFramework.dll
+E:\Drive\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\Drive\SadaAPI\SadaAPI\bin\Newtonsoft.Json.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Cors.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Helpers.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Mvc.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Optimization.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Razor.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.dll
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.dll
+E:\Drive\SadaAPI\SadaAPI\bin\WebGrease.dll
+E:\Drive\SadaAPI\SadaAPI\bin\EntityFramework.xml
+E:\Drive\SadaAPI\SadaAPI\bin\EntityFramework.SqlServer.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Net.Http.Formatting.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.Cors.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Newtonsoft.Json.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Helpers.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Http.WebHost.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Mvc.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Optimization.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.Razor.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.Deployment.xml
+E:\Drive\SadaAPI\SadaAPI\bin\System.Web.WebPages.Razor.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Antlr3.Runtime.pdb
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.ApplicationInsights.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.DependencyCollector.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.WindowsServer.xml
+E:\Drive\SadaAPI\SadaAPI\bin\Microsoft.AI.Web.xml
+E:\Drive\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csprojAssemblyReference.cache
+E:\Drive\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CoreCompileInputs.cache
+E:\Drive\SadaAPI\SadaAPI\obj\Debug\SadaAPI.csproj.CopyComplete
+E:\Drive\SadaAPI\SadaAPI\obj\Debug\SadaAPI.dll
+E:\Drive\SadaAPI\SadaAPI\obj\Debug\SadaAPI.pdb

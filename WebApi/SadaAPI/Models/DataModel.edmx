@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Adocao">
+          <Key>
+            <PropertyRef Name="Id_Adocao" />
+          </Key>
+          <Property Name="Id_Adocao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DataAdocao" Type="date" Nullable="false" />
+          <Property Name="Fk_Usuario" Type="int" Nullable="false" />
+          <Property Name="Fk_Anuncio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="Id_Animal" />
+          </Key>
+          <Property Name="Id_Animal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Raca" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sexo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Tamanho" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Cor" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DescricaoAnimal" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Anuncio">
+          <Key>
+            <PropertyRef Name="Id_Anuncio" />
+          </Key>
+          <Property Name="Id_Anuncio" Type="int" Nullable="false" />
+          <Property Name="Fk_Usuario" Type="int" Nullable="false" />
+          <Property Name="Fk_Animal" Type="int" Nullable="false" />
+          <Property Name="Fk_TipoAnuncio" Type="int" Nullable="false" />
+          <Property Name="DataInicio" Type="date" Nullable="false" />
+          <Property Name="DataFim" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnuncioEvento">
+          <Key>
+            <PropertyRef Name="Id_AnuncioEvento" />
+          </Key>
+          <Property Name="Id_AnuncioEvento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fk_Evento" Type="int" Nullable="false" />
+          <Property Name="Fk_Anuncio" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comunicacao">
+          <Key>
+            <PropertyRef Name="Id_Comunicacao" />
+          </Key>
+          <Property Name="Id_Comunicacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Comentario" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="DataHora" Type="date" Nullable="false" />
+          <Property Name="Fk_Anuncio" Type="int" Nullable="false" />
+          <Property Name="Fk_Comunicacao" Type="int" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="Id_Evento" />
+          </Key>
+          <Property Name="Id_Evento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DescricaoEvento" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="DataInicio" Type="date" Nullable="false" />
+          <Property Name="DataEncerramento" Type="date" Nullable="false" />
+          <Property Name="Local" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ListaDePresenca" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fk_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoAnuncio">
+          <Key>
+            <PropertyRef Name="Id_TipoAnuncio" />
+          </Key>
+          <Property Name="Id_TipoAnuncio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Senha" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="DataCadastro" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Adocao_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Adocao" Type="Self.Adocao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="Adocao">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Adocao_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Adocao" Type="Self.Adocao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Adocao">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToAnimal">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="Id_Animal" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_Animal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToTipoAnuncio">
+          <End Role="TipoAnuncio" Type="Self.TipoAnuncio" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAnuncio">
+              <PropertyRef Name="Id_TipoAnuncio" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_TipoAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioEvento_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioEvento" Type="Self.AnuncioEvento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="AnuncioEvento">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioEvento_ToEvento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="1" />
+          <End Role="AnuncioEvento" Type="Self.AnuncioEvento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="Id_Evento" />
+            </Principal>
+            <Dependent Role="AnuncioEvento">
+              <PropertyRef Name="Fk_Evento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comunicacao_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Comunicacao" Type="Self.Comunicacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="Comunicacao">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comunicacao_ToComunicacao">
+          <End Role="Comunicacao" Type="Self.Comunicacao" Multiplicity="0..1" />
+          <End Role="Comunicacao1" Type="Self.Comunicacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comunicacao">
+              <PropertyRef Name="Id_Comunicacao" />
+            </Principal>
+            <Dependent Role="Comunicacao1">
+              <PropertyRef Name="Fk_Comunicacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Evento_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Evento" Type="Self.Evento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Evento">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelsStoreContainer">
+          <EntitySet Name="Adocao" EntityType="Self.Adocao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Animal" EntityType="Self.Animal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Anuncio" EntityType="Self.Anuncio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnuncioEvento" EntityType="Self.AnuncioEvento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comunicacao" EntityType="Self.Comunicacao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Evento" EntityType="Self.Evento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoAnuncio" EntityType="Self.TipoAnuncio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Adocao_ToAnuncio" Association="Self.FK_Adocao_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Adocao" EntitySet="Adocao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Adocao_ToUsuario" Association="Self.FK_Adocao_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Adocao" EntitySet="Adocao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToAnimal" Association="Self.FK_Anuncio_ToAnimal">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToTipoAnuncio" Association="Self.FK_Anuncio_ToTipoAnuncio">
+            <End Role="TipoAnuncio" EntitySet="TipoAnuncio" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToUsuario" Association="Self.FK_Anuncio_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioEvento_ToAnuncio" Association="Self.FK_AnuncioEvento_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioEvento" EntitySet="AnuncioEvento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioEvento_ToEvento" Association="Self.FK_AnuncioEvento_ToEvento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="AnuncioEvento" EntitySet="AnuncioEvento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comunicacao_ToAnuncio" Association="Self.FK_Comunicacao_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Comunicacao" EntitySet="Comunicacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comunicacao_ToComunicacao" Association="Self.FK_Comunicacao_ToComunicacao">
+            <End Role="Comunicacao" EntitySet="Comunicacao" />
+            <End Role="Comunicacao1" EntitySet="Comunicacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Evento_ToUsuario" Association="Self.FK_Evento_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Evento" EntitySet="Evento" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Adocao">
+          <Key>
+            <PropertyRef Name="Id_Adocao" />
+          </Key>
+          <Property Name="Id_Adocao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataAdocao" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fk_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="Fk_Anuncio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_Adocao_ToAnuncio" FromRole="Adocao" ToRole="Anuncio" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Adocao_ToUsuario" FromRole="Adocao" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Animal">
+          <Key>
+            <PropertyRef Name="Id_Animal" />
+          </Key>
+          <Property Name="Id_Animal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Raca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tamanho" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cor" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DescricaoAnimal" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_Anuncio_ToAnimal" FromRole="Animal" ToRole="Anuncio" />
+        </EntityType>
+        <EntityType Name="Anuncio">
+          <Key>
+            <PropertyRef Name="Id_Anuncio" />
+          </Key>
+          <Property Name="Id_Anuncio" Type="Int32" Nullable="false" />
+          <Property Name="Fk_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="Fk_Animal" Type="Int32" Nullable="false" />
+          <Property Name="Fk_TipoAnuncio" Type="Int32" Nullable="false" />
+          <Property Name="DataInicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DataFim" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Adocao" Relationship="Self.FK_Adocao_ToAnuncio" FromRole="Anuncio" ToRole="Adocao" />
+          <NavigationProperty Name="Animal" Relationship="Self.FK_Anuncio_ToAnimal" FromRole="Anuncio" ToRole="Animal" />
+          <NavigationProperty Name="TipoAnuncio" Relationship="Self.FK_Anuncio_ToTipoAnuncio" FromRole="Anuncio" ToRole="TipoAnuncio" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Anuncio_ToUsuario" FromRole="Anuncio" ToRole="Usuario" />
+          <NavigationProperty Name="AnuncioEvento" Relationship="Self.FK_AnuncioEvento_ToAnuncio" FromRole="Anuncio" ToRole="AnuncioEvento" />
+          <NavigationProperty Name="Comunicacao" Relationship="Self.FK_Comunicacao_ToAnuncio" FromRole="Anuncio" ToRole="Comunicacao" />
+        </EntityType>
+        <EntityType Name="AnuncioEvento">
+          <Key>
+            <PropertyRef Name="Id_AnuncioEvento" />
+          </Key>
+          <Property Name="Id_AnuncioEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fk_Evento" Type="Int32" Nullable="false" />
+          <Property Name="Fk_Anuncio" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_AnuncioEvento_ToAnuncio" FromRole="AnuncioEvento" ToRole="Anuncio" />
+          <NavigationProperty Name="Evento" Relationship="Self.FK_AnuncioEvento_ToEvento" FromRole="AnuncioEvento" ToRole="Evento" />
+        </EntityType>
+        <EntityType Name="Comunicacao">
+          <Key>
+            <PropertyRef Name="Id_Comunicacao" />
+          </Key>
+          <Property Name="Id_Comunicacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Comentario" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataHora" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Fk_Anuncio" Type="Int32" Nullable="false" />
+          <Property Name="Fk_Comunicacao" Type="Int32" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_Comunicacao_ToAnuncio" FromRole="Comunicacao" ToRole="Anuncio" />
+          <NavigationProperty Name="Comunicacao1" Relationship="Self.FK_Comunicacao_ToComunicacao" FromRole="Comunicacao" ToRole="Comunicacao1" />
+          <NavigationProperty Name="Comunicacao2" Relationship="Self.FK_Comunicacao_ToComunicacao" FromRole="Comunicacao1" ToRole="Comunicacao" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="Id_Evento" />
+          </Key>
+          <Property Name="Id_Evento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DescricaoEvento" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataInicio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DataEncerramento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Local" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ListaDePresenca" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fk_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="AnuncioEvento" Relationship="Self.FK_AnuncioEvento_ToEvento" FromRole="Evento" ToRole="AnuncioEvento" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Evento_ToUsuario" FromRole="Evento" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="TipoAnuncio">
+          <Key>
+            <PropertyRef Name="Id_TipoAnuncio" />
+          </Key>
+          <Property Name="Id_TipoAnuncio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_Anuncio_ToTipoAnuncio" FromRole="TipoAnuncio" ToRole="Anuncio" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Senha" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataCadastro" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Adocao" Relationship="Self.FK_Adocao_ToUsuario" FromRole="Usuario" ToRole="Adocao" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK_Anuncio_ToUsuario" FromRole="Usuario" ToRole="Anuncio" />
+          <NavigationProperty Name="Evento" Relationship="Self.FK_Evento_ToUsuario" FromRole="Usuario" ToRole="Evento" />
+        </EntityType>
+        <Association Name="FK_Adocao_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Adocao" Type="Self.Adocao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="Adocao">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Adocao_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Adocao" Type="Self.Adocao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Adocao">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToAnimal">
+          <End Role="Animal" Type="Self.Animal" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Animal">
+              <PropertyRef Name="Id_Animal" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_Animal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToTipoAnuncio">
+          <End Role="TipoAnuncio" Type="Self.TipoAnuncio" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoAnuncio">
+              <PropertyRef Name="Id_TipoAnuncio" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_TipoAnuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Anuncio_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Anuncio">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioEvento_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="AnuncioEvento" Type="Self.AnuncioEvento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="AnuncioEvento">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comunicacao_ToAnuncio">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Comunicacao" Type="Self.Comunicacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="Id_Anuncio" />
+            </Principal>
+            <Dependent Role="Comunicacao">
+              <PropertyRef Name="Fk_Anuncio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AnuncioEvento_ToEvento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="1" />
+          <End Role="AnuncioEvento" Type="Self.AnuncioEvento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="Id_Evento" />
+            </Principal>
+            <Dependent Role="AnuncioEvento">
+              <PropertyRef Name="Fk_Evento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comunicacao_ToComunicacao">
+          <End Role="Comunicacao" Type="Self.Comunicacao" Multiplicity="0..1" />
+          <End Role="Comunicacao1" Type="Self.Comunicacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Comunicacao">
+              <PropertyRef Name="Id_Comunicacao" />
+            </Principal>
+            <Dependent Role="Comunicacao1">
+              <PropertyRef Name="Fk_Comunicacao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Evento_ToUsuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Evento" Type="Self.Evento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="Id_Usuario" />
+            </Principal>
+            <Dependent Role="Evento">
+              <PropertyRef Name="Fk_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Adocao" EntityType="Self.Adocao" />
+          <EntitySet Name="Animal" EntityType="Self.Animal" />
+          <EntitySet Name="Anuncio" EntityType="Self.Anuncio" />
+          <EntitySet Name="AnuncioEvento" EntityType="Self.AnuncioEvento" />
+          <EntitySet Name="Comunicacao" EntityType="Self.Comunicacao" />
+          <EntitySet Name="Evento" EntityType="Self.Evento" />
+          <EntitySet Name="TipoAnuncio" EntityType="Self.TipoAnuncio" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+          <AssociationSet Name="FK_Adocao_ToAnuncio" Association="Self.FK_Adocao_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Adocao" EntitySet="Adocao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Adocao_ToUsuario" Association="Self.FK_Adocao_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Adocao" EntitySet="Adocao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToAnimal" Association="Self.FK_Anuncio_ToAnimal">
+            <End Role="Animal" EntitySet="Animal" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToTipoAnuncio" Association="Self.FK_Anuncio_ToTipoAnuncio">
+            <End Role="TipoAnuncio" EntitySet="TipoAnuncio" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Anuncio_ToUsuario" Association="Self.FK_Anuncio_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Anuncio" EntitySet="Anuncio" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioEvento_ToAnuncio" Association="Self.FK_AnuncioEvento_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="AnuncioEvento" EntitySet="AnuncioEvento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comunicacao_ToAnuncio" Association="Self.FK_Comunicacao_ToAnuncio">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Comunicacao" EntitySet="Comunicacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AnuncioEvento_ToEvento" Association="Self.FK_AnuncioEvento_ToEvento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="AnuncioEvento" EntitySet="AnuncioEvento" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comunicacao_ToComunicacao" Association="Self.FK_Comunicacao_ToComunicacao">
+            <End Role="Comunicacao" EntitySet="Comunicacao" />
+            <End Role="Comunicacao1" EntitySet="Comunicacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Evento_ToUsuario" Association="Self.FK_Evento_ToUsuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Evento" EntitySet="Evento" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="DataModel">
+          <EntitySetMapping Name="Adocao">
+            <EntityTypeMapping TypeName="Models.Adocao">
+              <MappingFragment StoreEntitySet="Adocao">
+                <ScalarProperty Name="Id_Adocao" ColumnName="Id_Adocao" />
+                <ScalarProperty Name="DataAdocao" ColumnName="DataAdocao" />
+                <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+                <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Animal">
+            <EntityTypeMapping TypeName="Models.Animal">
+              <MappingFragment StoreEntitySet="Animal">
+                <ScalarProperty Name="Id_Animal" ColumnName="Id_Animal" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Raca" ColumnName="Raca" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+                <ScalarProperty Name="Cor" ColumnName="Cor" />
+                <ScalarProperty Name="DescricaoAnimal" ColumnName="DescricaoAnimal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Anuncio">
+            <EntityTypeMapping TypeName="Models.Anuncio">
+              <MappingFragment StoreEntitySet="Anuncio">
+                <ScalarProperty Name="Id_Anuncio" ColumnName="Id_Anuncio" />
+                <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+                <ScalarProperty Name="Fk_Animal" ColumnName="Fk_Animal" />
+                <ScalarProperty Name="Fk_TipoAnuncio" ColumnName="Fk_TipoAnuncio" />
+                <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+                <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnuncioEvento">
+            <EntityTypeMapping TypeName="Models.AnuncioEvento">
+              <MappingFragment StoreEntitySet="AnuncioEvento">
+                <ScalarProperty Name="Id_AnuncioEvento" ColumnName="Id_AnuncioEvento" />
+                <ScalarProperty Name="Fk_Evento" ColumnName="Fk_Evento" />
+                <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comunicacao">
+            <EntityTypeMapping TypeName="Models.Comunicacao">
+              <MappingFragment StoreEntitySet="Comunicacao">
+                <ScalarProperty Name="Id_Comunicacao" ColumnName="Id_Comunicacao" />
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+                <ScalarProperty Name="DataHora" ColumnName="DataHora" />
+                <ScalarProperty Name="Fk_Anuncio" ColumnName="Fk_Anuncio" />
+                <ScalarProperty Name="Fk_Comunicacao" ColumnName="Fk_Comunicacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Evento">
+            <EntityTypeMapping TypeName="Models.Evento">
+              <MappingFragment StoreEntitySet="Evento">
+                <ScalarProperty Name="Id_Evento" ColumnName="Id_Evento" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DescricaoEvento" ColumnName="DescricaoEvento" />
+                <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+                <ScalarProperty Name="DataEncerramento" ColumnName="DataEncerramento" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="ListaDePresenca" ColumnName="ListaDePresenca" />
+                <ScalarProperty Name="Fk_Usuario" ColumnName="Fk_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoAnuncio">
+            <EntityTypeMapping TypeName="Models.TipoAnuncio">
+              <MappingFragment StoreEntitySet="TipoAnuncio">
+                <ScalarProperty Name="Id_TipoAnuncio" ColumnName="Id_TipoAnuncio" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="Models.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
